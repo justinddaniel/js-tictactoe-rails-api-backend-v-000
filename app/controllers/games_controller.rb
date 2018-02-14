@@ -2,7 +2,7 @@ class GamesController < ApplicationController
   # Add your GamesController code here
 
   def index
-    @games = Games.all
+    @games = Game.all
     render json: @game, status: 200
   end
 
