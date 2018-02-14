@@ -1,3 +1,3 @@
 class GameSerializer < ActiveModel::Serializer
-  serializer :state, Array
+  serialize :state, Array
 end
