@@ -17,16 +17,13 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find(params[:id])
-    respond_to do |format|
-      format.json { render json: @game }
-    end
+   render json: @game 
   end
 
   def edit
   end
 
   def update
-    @game = Game.find(params[:id])
     @game.update(game_params)
     render json: @game
   end
