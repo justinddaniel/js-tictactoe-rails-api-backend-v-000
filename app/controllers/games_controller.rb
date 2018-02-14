@@ -13,7 +13,7 @@ class GamesController < ApplicationController
     render json: @game, status: 201
   end
 
-  def show 
+  def show
     @game = Game.find(params[:id])
     respond_to do |format|
       format.html { render :show }
@@ -25,6 +25,12 @@ class GamesController < ApplicationController
   end
 
   def update
+  end
+
+  private
+
+  def game_params
+    params.require(:game).permit(:state)
   end
 
 end
